@@ -1,0 +1,19 @@
+{
+  "name": "storefarm-admin",
+  "version": "1.0.0",
+  "description": "Storefam admin page",
+  "main": "index.js",
+  "scripts": {
+    "start": "static -p 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://worudso@bitbucket.org/hplusmallside/storefarm-admin.git"
+  },
+  "author": "hplusmallside",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/hplusmallside/storefarm-admin#readme",
+  "devDependencies": {
+    "node-static": "^0.7.9"
+  }
+}

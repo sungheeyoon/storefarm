@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+        section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  마켓아이디 관리> 마진율 관리
+            // 마켓아이디 관리 등록,변경> <!end
+            .row.mt
+              .col-lg-12
+                div(align='right', ;='')
+                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  신규 마진율 등록/변경
+                h4  사이트 정보
+                .content-panel
+                  section#unseen
+                    table.table.table-bordered.table-striped.table-condensed
+                      thead
+                        tr
+                          th.numeric  셋트명
+                          th.numeric  메모
+                          th.numeric  등록일
+                          th.numeric  메모
+                          th.numeric  설정
+                      tbody
+                        tr
+                          td  스토어팜 기준가
+                          td  testaa
+                          td.numeric  16.12.12 19:11
+                          td.numeric  2(30만)
+                          th.numeric  삭제
+                        tr
+                          td  쿠팡 기준가
+                          td  testaa
+                          td.numeric  16.12.12 19:11
+                          td.numeric  2(30만)
+                          th.numeric  삭제
+                // /content-panel
+                br
+                div(align='center', ;='')
+                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
+
+        section#main-content
+            section.wrapper
+
+                  h4
+                    마진율 설정
+                    br
+                    마진율 셋트명
+                  .content-panel
+                    section#unseen
+                      table.table.table-bordered.table-striped.table-condensed
+                        thead
+                          tr
+                            th.numeric  금액
+                            th.numeric  마진율
+                            th.numeric  배송비
+                            th.numeric
+                        tbody
+                          tr
+                            td  ~ 5000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  5000원 이상 ~ 10000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  10000원 이상 ~ 30000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  30000원 이상 ~ 50000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  50000원 이상 ~ 100000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  100000원 이상 ~ 200000원 미만
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                          tr
+                            td  200000원 이상 ~
+                            td.numeric  25%
+                            td.numeric  2500
+                            td.numeric
+                  // /content-panel
+                  br
+                  div(align='center', ;='')
+                    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인

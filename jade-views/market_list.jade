@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+        section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  마켓아이디 관리> 리스트
+            // 마켓아이디 관리 리스트-> <!end
+            div(align='right', ;='')
+              button.btn.btn-primary.btn-sm(href='index.html', type='submit')  마켓 아이디 등록하기
+            .row.mt
+              .col-lg-12
+                .content-panel
+                  section#unseen
+                    table.table.table-bordered.table-striped.table-condensed
+                      thead
+                        tr
+                          th.numeric
+                            | 사이트
+                            br
+                            |  종류
+                          th.numeric  아이디
+                          th.numeric  최종 연동일
+                          th.numeric  등급
+                          th.numeric  현 상품수
+                          th.numeric  신규주문
+                          th.numeric  신규문의
+                          th.numeric  최근순환일
+                          th.numeric  최근증분일
+                          th.numeric  최근품단종일
+                          th.numeric  설정
+                      tbody
+                        tr
+                          td AAC
+                          td  COMPANY LIMITED.
+                          td.numeric $1.38
+                          td.numeric -0.01
+                          td.numeric -0.36%
+                          td.numeric $1.39
+                          td.numeric $1.39
+                          td.numeric $1.38
+                          td.numeric 9,395
+                          td.numeric 9,395
+                          td.numeric 9,395
+                        tr
+                          td AAD
+                          td GROUP
+                          td.numeric $1.15
+                          td.numeric   +0.02
+                          td.numeric 1.32%
+                          td.numeric $1.14
+                          td.numeric $1.15
+                          td.numeric $1.13
+                          td.numeric 56,431
+                          td.numeric 9,395
+                          td.numeric 9,395
+                        tr
+                          td AAX
+                          td LIMITED
+                          td.numeric $4.00
+                          td.numeric -0.04
+                          td.numeric -0.99%
+                          td.numeric $4.01
+                          td.numeric $4.05
+                          td.numeric $4.00
+                          td.numeric 90,641
+                          td.numeric 9,395
+                          td.numeric 9,395
+                        tr
+                          td ABC
+                          td ADELAIDE
+                          td.numeric $3.00
+                          td.numeric   +0.06
+                          td.numeric 2.04%
+                          td.numeric $2.98
+                          td.numeric $3.00
+                          td.numeric $2.96
+                          td.numeric 862,518
+                          td.numeric 9,395
+                          td.numeric 9,395
+                        tr
+                          td ABP
+                          td ABACUS
+                          td.numeric $1.91
+                          td.numeric 0.00
+                          td.numeric 0.00%
+                          td.numeric $1.92
+                          td.numeric $1.93
+                          td.numeric $1.90
+                          td.numeric 595,701
+                          td.numeric 9,395
+                          td.numeric 9,395
+                // /content-panel
+              // /col-lg-4
+            // /row
+          // 마켓아이디 관리>등록,변경
+      // /MAIN CONTENT

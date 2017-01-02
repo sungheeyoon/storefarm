@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    //
+      **********************************************************************************************************************************************************
+      MAIN CONTENT
+      ***********************************************************************************************************************************************************
+    #login-page
+      .container
+        form.form-login(action='index.jade')
+          h2.form-login-heading sign in now
+          .login-wrap
+            input.form-control(type='text', placeholder='아이디 입력', autofocus='')
+            br
+            input.form-control(type='password', placeholder='비밀번호 입력')
+            br
+            br
+            button.btn.btn-theme.btn-block(type='button', onclick="location.href='index.html'")
+              i.fa.fa-lock
+              |  로그인
+            hr
+            .login-social-link.centered
+              br
+              |                 아이디가 없으십니까?
+              br
+              a(href='form_component.jade')
+                | 회원가입
+            .registration
+              | ID 또는 Password를 잊으셨습니까?
+              br
+              a(href='forgot_select.jade')
+                | ID/Password
+          // Modal
+          #myModal.modal.fade(aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                  h4.modal-title asdasd
+                .modal-body
+                  p Enter your e-mail address below to reset your password.
+                  input.form-control.placeholder-no-fix(type='text', name='email', placeholder='Email', autocomplete='off')
+                .modal-footer
+                  button.btn.btn-default(data-dismiss='modal', type='button') Cancel
+                  button.btn.btn-theme(type='button') Submit
+          // modal
+    // js placed at the end of the document so the pages load faster
+    script(src='/assets/js/jquery.js')
+    script(src='/assets/js/bootstrap.min.js')
+    // BACKSTRETCH
+    // You can use an image of whatever size. This script will stretch to fit in any screen size.
+    script(type='text/javascript', src='/assets/js/jquery.backstretch.min.js')
+    script.
+      $.backstretch("/assets/img/login-bg.jpg", {speed: 500});

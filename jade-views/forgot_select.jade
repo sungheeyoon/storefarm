@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+      // main content start
+      section#main-content
+        section.wrapper
+          h3
+            i.fa.fa-angle-right
+            |  ID 찾기
+          .col-lg-12
+            .form-panel
+              form.form-horizontal.style-form(method='get')
+                .form-group
+                  label.col-sm-2.col-sm-2.control-label 이름
+                  .col-sm-3
+                    input.form-control(type='text')
+                .form-group
+                  label.col-sm-2.col-sm-2.control-label 주민등록번호
+                  .col-sm-3
+                    input.form-control(type='password')
+                    span.help-block "-"를 빼고 입력하세요
+                div(align='right')
+                  button.btn.btn-theme(type='submit') 확인
+          // col-lg-12
+      // /MAIN CONTENT
+      section#main-content
+        section.wrapper
+          h3
+            i.fa.fa-angle-right
+            |  PassWord 찾기
+          .col-lg-12
+            .form-panel
+              form.form-horizontal.style-form(method='get')
+                .form-group
+                  label.col-sm-2.col-sm-2.control-label 아이디
+                  .col-sm-3
+                    input.form-control(type='text')
+                .form-group
+                  label.col-sm-2.col-sm-2.control-label 주민등록번호
+                  .col-sm-3
+                    input.form-control(type='password')
+                    span.help-block "-"를 빼고 입력하세요
+                div(align='right')
+                  button.btn.btn-theme(type='submit') 확인
