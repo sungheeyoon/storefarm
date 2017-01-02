@@ -22,24 +22,14 @@ html(lang='en')
                     table.table.table-bordered.table-striped.table-condensed
                       thead
                         tr
-                          th.numeric  셋트명
-                          th.numeric  메모
-                          th.numeric  등록일
-                          th.numeric  메모
-                          th.numeric  설정
+                         each val in ['셋트명','메모','등록일','메모','설']
+                              th= val
                       tbody
-                        tr
-                          td  스토어팜 기준가
-                          td  testaa
-                          td.numeric  16.12.12 19:11
-                          td.numeric  2(30만)
-                          th.numeric  삭제
-                        tr
-                          td  쿠팡 기준가
-                          td  testaa
-                          td.numeric  16.12.12 19:11
-                          td.numeric  2(30만)
-                          th.numeric  삭제
+                         each val in ['스토어팜 기준가','쿠팡 기준가']
+                              tr
+                                td= val
+                                   each vals in ['testaa','16.12.12 19:11','2(30만)','삭제']
+                                      td= vals
                 // /content-panel
                 br
                 div(align='center', ;='')
@@ -56,48 +46,21 @@ html(lang='en')
                     section#unseen
                       table.table.table-bordered.table-striped.table-condensed
                         thead
-                          tr
-                            th.numeric  금액
-                            th.numeric  마진율
-                            th.numeric  배송비
-                            th.numeric
+                         tr
+                          each val in ['금액','마진율','배송비','']
+                             th= val
+
                         tbody
-                          tr
-                            td  ~ 5000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  5000원 이상 ~ 10000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  10000원 이상 ~ 30000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  30000원 이상 ~ 50000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  50000원 이상 ~ 100000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  100000원 이상 ~ 200000원 미만
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
-                          tr
-                            td  200000원 이상 ~
-                            td.numeric  25%
-                            td.numeric  2500
-                            td.numeric
+
+                          each val in ['~5000원 미만', '5000원 이상 ~ 10000원 미만', '10000원 이상 ~ 30000원 미만','30000원 이상 ~ 50000원 미만','50000원 이상 ~ 100000원 미만','100000원 이상 ~ 200000원 미만','200000원 이상 ~']
+                              tr
+                                td= val
+
+                                   each vals in ['25%','2500','']
+                                      td= vals
+
                   // /content-panel
                   br
                   div(align='center', ;='')
                     button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
+
