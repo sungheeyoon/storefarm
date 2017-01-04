@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+     section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  Form Components
+            .row.mt
+              .col-lg-13
+                .form-panel
+                  h4.mb
+                    i.fa.fa-angle-right
+                    |  Input Messages
+                  form.form-horizontal.tasi-form(method='get')
+                    .form-group.has-success
+                      label.col-sm-2.control-label.col-lg-2(for='inputSuccess') Input with success
+                      .col-lg-3
+
+                        input#inputSuccess.form-control(type='text')
+                      
+
+                    .form-group.has-warning
+                      label.col-sm-2.control-label.col-lg-2(for='inputWarning') Input with warning
+                      .col-lg-10
+                        input#inputWarning.form-control(type='text')
+                    .form-group.has-error
+                      label.col-sm-2.control-label.col-lg-2(for='inputError') Input with error
+                      .col-lg-10
+                        input#inputError.form-control(type='text')
+                        .col-sm-14
+                          select(name='job')
+                            option(value='') 회원정보선택
+                            option(value='오너클랜아이디') 오너클랜아이디
+                            option(value='마켓아이디') 마켓아이디
+                            option(value='마켓종류') 마켓종류
+                            option(value='가입일') 가입일
+                            option(value='등급') 등급
+                            option(value='최근순환일') 최근순환일
+                            option(value='최근증분일') 최근증분일
+                            option(value='최근품단종일') 최근품단종일

@@ -3,16 +3,18 @@ var app = express();
 var list=["셋트명", "메모", "등록일", "메모", "설정"];
 var list2 = ["스토어팜 기준가", "testaa", "16.12.12 19:11", "2(30)만", "삭제"]
 var list3 = ["쿠팡 기준가", "testaa", "16.12.12 19:11", "2(30)만", "삭제"]
-var list4 = ['금액', '마진율','배송비']
-var list5 = ["5000원 미만", "25%", "2500"]
-var list6 = ["5000원 이상 10000원 미만", "25%", "2500"]
-var list7 = ["10000원 이상 30000원 미만", "25%", "2500"]
-var list8 = ["30000원 이상 50000원 미만", "25%", "2500"]
-var list9 = ["50000원 이상 100000원 미만", "25%", "2500"]
-var list10 = ["100000원 이상 200000원 미만", "25%", "2500"]
-var list11 = ["200000원 이상", "25%", "2500"]
 
-var array =new Array(list, list2, list3,list4,list5,list6,list7, list8, list9,list10,list11)
+var asset = ['금액', '마진율','배송비']
+var asset2 = ["5000원 미만", "25%", "2500"]
+var asset3 = ["5000원 이상 10000원 미만", "25%", "2500"]
+var asset4 = ["10000원 이상 30000원 미만", "25%", "2500"]
+var asset5 = ["30000원 이상 50000원 미만", "25%", "2500"]
+var asset6 = ["50000원 이상 100000원 미만", "25%", "2500"]
+var asset7 = ["100000원 이상 200000원 미만", "25%", "2500"]
+var asset8 = ["200000원 이상", "25%", "2500"]
+
+var array =new Array(list, list2, list3)
+var array1 = new Array(asset,asset2,asset3,asset4,asset5,asset6,asset7,asset8)
 app.set('view engine','jade');
 app.set('views','./jade-views');
 app.use('/assets',express.static('assets'));
@@ -58,7 +60,7 @@ app.get('/market_regist.jade', function(req,res){
 })
 app.get('/market_margin.jade', function(req,res){
 
-  res.render('tabletest', {array});
+  res.render('tabletest', {array,array1});
 
 })
 

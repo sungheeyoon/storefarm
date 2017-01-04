@@ -1,4 +1,5 @@
 extends market_margin
+
 block append content
     table.table.table-bordered.table-striped.table-condensed
       thead
@@ -7,38 +8,23 @@ block append content
             td=item
 
       tbody
-        tr
-            for item in array[1]
-              td=item
-        tr
-            for item in array[2]
-              td=item
+        for ll,i in array
+          if i==0
+            -continue
+          tr
+            for ml in ll 
+              td= ml
 block append content2
     table.table.table-bordered.table-striped.table-condensed
       thead
-        tr
-          for item in array[3]
+        tr 
+          for item in array1[0]
             td=item
 
       tbody
-        tr
-            for item in array[4]
-               td=item
-        tr
-            for item in array[5]
-                td=item
-        tr
-            for item in array[6]
-                td=item
-        tr
-            for item in array[7]
-                td=item
-        tr
-            for item in array[8]
-                td=item
-        tr
-            for item in array[9]
-                td=item
-        tr
-            for item in array[10]
-                td=item
+        for ll in array1
+          if i==0
+            -continue
+          tr
+            for ml in ll 
+              td= ml
