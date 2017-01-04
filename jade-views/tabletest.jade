@@ -3,13 +3,42 @@ block append content
     table.table.table-bordered.table-striped.table-condensed
       thead
         tr 
-          for item in list
+          for item in array[0]
             td=item
 
       tbody
         tr
-            for item in list2
+            for item in array[1]
               td=item
         tr
-            for item in list3
+            for item in array[2]
               td=item
+block append content2
+    table.table.table-bordered.table-striped.table-condensed
+      thead
+        tr
+          for item in array[3]
+            td=item
+
+      tbody
+        tr
+            for item in array[4]
+               td=item
+        tr
+            for item in array[5]
+                td=item
+        tr
+            for item in array[6]
+                td=item
+        tr
+            for item in array[7]
+                td=item
+        tr
+            for item in array[8]
+                td=item
+        tr
+            for item in array[9]
+                td=item
+        tr
+            for item in array[10]
+                td=item

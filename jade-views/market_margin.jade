@@ -24,27 +24,14 @@ html(lang='en')
                     button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
         section#main-content
             section.wrapper
-
+              
                   h4
                     마진율 설정
                     br
                     마진율 셋트명
                   .content-panel
                     section#unseen
-                      table.table.table-bordered.table-striped.table-condensed
-                        thead
-                         tr
-                          each val in ['금액','마진율','배송비','']
-                             th= val
-
-                        tbody
-
-                          each val in ['~5000원 미만', '5000원 이상 ~ 10000원 미만', '10000원 이상 ~ 30000원 미만','30000원 이상 ~ 50000원 미만','50000원 이상 ~ 100000원 미만','100000원 이상 ~ 200000원 미만','200000원 이상 ~']
-                              tr
-                                td= val
-
-                                   each vals in ['25%','2500','']
-                                      td= vals
+                       block content2
 
                   // /content-panel
                   br
