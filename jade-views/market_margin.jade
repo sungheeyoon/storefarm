@@ -21,46 +21,7 @@ html(lang='en')
                   section#unseen
                     table.table.table-bordered.table-striped.table-condensed
                       thead
-                        tr
-                         each val in ['셋트명','메모','등록일','메모','설']
-                              th= val
-                      tbody
-                         each val in ['스토어팜 기준가','쿠팡 기준가']
-                              tr
-                                td= val
-                                   each vals in ['testaa','16.12.12 19:11','2(30만)','삭제']
-                                      td= vals
-                // /content-panel
-                br
-                div(align='center', ;='')
-                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
-
-        section#main-content
-            section.wrapper
-
-                  h4
-                    마진율 설정
-                    br
-                    마진율 셋트명
-                  .content-panel
-                    section#unseen
-                      table.table.table-bordered.table-striped.table-condensed
-                        thead
-                         tr
-                          each val in ['금액','마진율','배송비','']
-                             th= val
-
-                        tbody
-
-                          each val in ['~5000원 미만', '5000원 이상 ~ 10000원 미만', '10000원 이상 ~ 30000원 미만','30000원 이상 ~ 50000원 미만','50000원 이상 ~ 100000원 미만','100000원 이상 ~ 200000원 미만','200000원 이상 ~']
-                              tr
-                                td= val
-
-                                   each vals in ['25%','2500','']
-                                      td= vals
-
-                  // /content-panel
-                  br
+                        block content
                   div(align='center', ;='')
                     button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
-
+                      

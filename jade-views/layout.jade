@@ -1,7 +1,13 @@
-extends table
-block content
-      section#main-content
-        section.wrapper
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+        section#main-content
+          section.wrapper
           h3
             i.fa.fa-angle-right
             |  마켓아이디 관리> 리스트
@@ -10,14 +16,25 @@ block content
             button.btn.btn-primary.btn-sm(href='index.html', type='submit')  마켓 아이디 등록하기
           .row.mt
             .col-lg-12
-              include ./table.jade
+              .content-panel
+                section#unseen
+                  table.table.table-bordered.table-striped.table-condensed
                     thead
                       tr
                         th.numeric
                           | 사이트
                           br
                           |  종류
-                        th
+                        th.numeric  아이디
+                        th.numeric  최종 연동일
+                        th.numeric  등급
+                        th.numeric  현 상품수
+                        th.numeric  신규주문
+                        th.numeric  신규문의
+                        th.numeric  최근순환일
+                        th.numeric  최근증분일
+                        th.numeric  최근품단종일
+                        th.numeric  설정
                     tbody
                       tr
                         td AAC
