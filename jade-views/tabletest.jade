@@ -1,0 +1,15 @@
+extends market_margin
+block append content
+    table.table.table-bordered.table-striped.table-condensed
+      thead
+        tr 
+          for item in list
+            td=item
+
+      tbody
+        tr
+            for item in list2
+              td=item
+        tr
+            for item in list3
+              td=item
