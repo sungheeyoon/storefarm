@@ -72,7 +72,7 @@ app.get('/form_component.jade', function(req,res){
 })
 app.get('/market_list.jade', function(req,res){
 
-  res.render('market_list');
+  res.render('market_list', {table1:[il_list1, il_list2, il_list3]});
 
 })
 app.get('/market_regist.jade', function(req,res){
@@ -82,7 +82,7 @@ app.get('/market_regist.jade', function(req,res){
 })
 app.get('/market_margin.jade', function(req,res){
 
-  res.render('tabletest', {array,array1});
+  res.render('market_margin', {table1:[list, list2, list3], table2:[asset, asset2, asset3, asset4, asset5, asset6, asset7, asset8]});
 
 })
 app.get('/text.jade', function(req,res){

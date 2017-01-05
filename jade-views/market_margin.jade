@@ -19,20 +19,22 @@ html(lang='en')
                 h4  사이트 정보
                 .content-panel
                   section#unseen
-                        block content
-                  div(align='center', ;='')
-                    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
+                    include ./tabletest
+                // /content-panel
+                br
+                div(align='center', ;='')
+                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
+
         section#main-content
             section.wrapper
-              
+
                   h4
                     마진율 설정
                     br
                     마진율 셋트명
                   .content-panel
                     section#unseen
-                       block content2
-
+                      include ./tabletest2
                   // /content-panel
                   br
                   div(align='center', ;='')

@@ -15,46 +15,56 @@ html(lang='en')
             .row.mt
               .col-lg-12
                 div(align='right', ;='')
-                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  등록/변경하기
+                  button.btn.btn-primary.btn-sm(onclick="location.href='tabletest_add.jade'", type='submit')  등록/변경하기
                 h4  사이트 정보
                 .content-panel
                   section#unseen
                     table.table.table-bordered.table-striped.table-condensed
                       thead
                         tr
-                          th.numeric
-                            | 사이트
-                            br
-                            |  종류
-                          th.numeric  Select
-                          th.numeric
-                          th.numeric
-                      tbody
-                        tr
-                          td  아이디
-                          td  COMPANY LIMITED.
-                          td.numeric  비번
-                          td.numeric
-                        tr
-                          td  연동키1(파트너키)
-                          td GROUP
-                          td.numeric  연동키2(시크릿키)
-                          td.numeric
-                        tr
-                          td  상호
-                          td  확인버튼
-                          td.numeric  담당자명
-                          td.numeric
-                        tr
-                          td  As 담장자 연락처
-                          td ADELAIDE
-                          td.numeric
-                          td.numeric
-                        tr
-                          td  반품주소지
-                          td ABACUS
-                          td.numeric
-                          td.numeric  input
+                          td 사이트 종류
+                          td
+                            select(name="stie")
+                              option(selected disabled) 사이트 선택
+                              option(value="스토어팜") 스토어팜
+                              option(value="쿠팡") 쿠팡
+                              option(value="옥션") 옥션
+                              option(value="지마켓") 지마켓
+                              option(value="고도") 고도
+                          td
+                          td
+                       tbody
+                         tr
+                           td 아이디
+                           td
+                             input(type="text" name="id")
+                           td 패스워드
+                           td
+                             input(type="password" name="passwd")
+                         tr
+                           td 연동키1(파트너키)
+                           td
+                             input(type="text", name="intlck_key1")
+                           td 연동키2(시크릿키)
+                           td
+                             input(type="text" name="intlck_key2")
+                         tr
+                           td 상호
+                           td
+                             input(type="text" name="sangho")
+                           td 담장자명
+                           td
+                             input(type="text" name="damdang")
+                         tr
+                           td AS담당자 연락처
+                           td
+                             input(type="text" name="asnumber")
+                         tr
+                           td 반품 주소지
+                           td
+                             input(type="text" name="retaddr")
+                           
+                    
                 // /content-panel
               // /col-lg-4
             // /row
