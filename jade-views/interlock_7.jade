@@ -1,0 +1,37 @@
+//사용자 ui 8번
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+        section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  작업 설정내용
+            // 마켓아이디 관리 리스트-> <!end
+            div(align='right', ;='')
+              button.btn.btn-primary.btn-sm(onclick="location.href='market_regist.jade'", type='submit') 신규 연동 작업 등록
+            .row.mt
+              .col-lg-12
+                .content-panel
+                  section#unseen
+                    include ./tabletest
+    section#container
+      aside
+        section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  기동로그
+            .row.mt
+              .col-lg-12
+                .content-panel
+                  section#unseen
+                    include ./tabletest2
+          div(align='center', ;='')
+            -for(var i=1; i<11; i++)
+                a.paginga(href='#') !{i}

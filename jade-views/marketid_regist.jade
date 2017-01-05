@@ -1,0 +1,75 @@
+doctype html
+html(lang='en')
+  head
+    include ./layouthead.jade
+  body
+    include ./layoutbody.jade
+    section#container
+      aside
+        section#main-content
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  마켓아이디> 등록,변경
+            // 마켓아이디  등록,변경> <!end
+            .row.mt
+              .col-lg-12
+                h4  상품 연동 설정
+                div(align='right', ;='')
+                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  등록/변경하기
+                .content-panel
+                  section#unseen
+                    table.table.table-bordered.table-striped.table-condensed
+                      thead
+                        tr
+                          th.numeric 연동제외
+                          th  
+                                     .col-sm-14
+                                          select(name='job')
+                                                      option(selected disabled) select
+                                                      option(value='스토어팜') 스토어팜
+                                                      option(value='쿠팡') 쿠팡
+                                                      option(value='옥션') 옥션
+                                                      option(value='지마켓') 지마켓
+                                                      option(value='고도') 고도
+                                                      
+  
+                      tbody
+                        tr
+                          td 카테고리 선택
+                          td
+                            p
+                               select(name='job')
+                                           option(selected disabled) 대분류
+                                           option(value='스토어팜') 스토어팜
+                                           option(value='쿠팡') 쿠팡
+                                           option(value='옥션') 옥션
+                                           option(value='지마켓') 지마켓
+                                                 option(value='고도') 고도
+                               | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                               select(name='job')
+                                           option(selected disabled) 중분류
+                                           option(value='스토어팜') 스토어팜
+                                           option(value='쿠팡') 쿠팡
+                                           option(value='옥션') 옥션
+                                           option(value='지마켓') 지마켓
+                                           option(value='고도') 고도
+                               | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                               select(name='job')
+                                           option(selected disabled) 소분류
+                                           option(value='스토어팜') 스토어팜
+                                           option(value='쿠팡') 쿠팡
+                                           option(value='옥션') 옥션
+                                           option(value='지마켓') 지마켓
+                                           option(value='고도') 고도
+                               | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                               select(name='job')
+                                           option(selected disabled) 세분류
+                                           option(value='스토어팜') 스토어팜
+                                           option(value='쿠팡') 쿠팡
+                                           option(value='옥션') 옥션
+                                           option(value='지마켓') 지마켓
+                                           option(value='고도') 고도
+                               | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                               
+                                 
