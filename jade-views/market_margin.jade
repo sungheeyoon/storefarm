@@ -19,7 +19,8 @@ html(lang='en')
                 h4  사이트 정보
                 .content-panel
                   section#unseen
-                    include ./tabletest
+                    table.table.table-bordered.table-striped.table-condensed
+                      include ./table_generator
                 // /content-panel
                 br
                 div(align='center', ;='')
@@ -34,7 +35,8 @@ html(lang='en')
                     마진율 셋트명
                   .content-panel
                     section#unseen
-                      include ./tabletest2
+                      table.table.table-bordered.table-striped.table-condensed
+                        include ./table_generator
                   // /content-panel
                   br
                   div(align='center', ;='')

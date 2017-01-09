@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+head
+  include ./layouthead.jade
+body
+  include ./layoutbody.jade
+  section#container
+   section#main-content
+        section.wrapper
+          h3
+            i.fa.fa-angle-right
+            |  상품관리
+          .row.mt
+            .col-lg-13
+              section#main-content
+                  section.wrapper
+
+                        h4
+                          카테고리별 검색결과
+
+                        .content-panel
+                          section#unseen
+                            table.table.table-bordered.table-striped.table-condensed
+                              thead
+                                tr
+                                  th !{tit}
+                                  th !{des}
+
+                              tbody

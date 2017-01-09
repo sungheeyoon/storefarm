@@ -18,8 +18,8 @@ var list_log2=["스토어팜", "testaa", "16.12.12 19:11", "증분작업", "매�
 var list_log3=["스토어팜", "testaa", "16.12.12 19:11", "상품순환", "1번","16.12.12 19:11", "16.12.12 19:11", "9854", '',"완료"]
 
 var il_list1=["사이트 종류", "아이디", "최종 연동일", "등급", "현 상품수", "신규주문", "신규문의", "최근 순환일", "최근 증분일", "최근 품단종일", "설정"]
-var il_list2=["스토어팜", "testaa", "16.12.12 19:11", "2(30만)", "274125", "50", "6", "16.12.12 19:11", "16.12.12 19:11", "16.12.12 19:11", "설정"]
-var il_list3=["스토어팜", "testaa", "16.12.12 19:11", "2(30만)", "274125", "50", "6", "16.12.12 19:11", "16.12.12 19:11", "16.12.12 19:11", "설정"]
+var il_table=[il_list1];
+
 
 var textarray =['판매타입','과세면세','배송비']
 var textarray2 =['원산지','원장구분','필터링']
@@ -49,6 +49,24 @@ app.get('/', function(req,res){
   res.render('layout');
 
 })
+/*
+app.get('/rowtable.jade', function(req,res){
+
+  var tit = req.query.id;
+  var des = req.query.passwd;
+  res.render('rowtable',{des,tit});
+
+})*/
+app.get('/market_list.jade', function(req, res){
+  var site=req.query.site;
+  var id=req.query.id;
+  var list1=[site, id];
+  if(site==null | id==null){}
+  else{
+    il_table.push(list1);
+  }
+  res.render('market_list', {table_header:il_table})
+})
 app.get('/login.jade', function(req,res){
 
   res.render('login');
@@ -70,11 +88,12 @@ app.get('/form_component.jade', function(req,res){
   res.render('form_component');
 
 })
+/*
 app.get('/market_list.jade', function(req,res){
 
   res.render('market_list', {table1:[il_list1, il_list2, il_list3]});
 
-})
+})*/
 app.get('/market_regist.jade', function(req,res){
 
   res.render('market_regist');
@@ -82,7 +101,7 @@ app.get('/market_regist.jade', function(req,res){
 })
 app.get('/market_margin.jade', function(req,res){
 
-  res.render('market_margin', {table1:[list, list2, list3], table2:[asset, asset2, asset3, asset4, asset5, asset6, asset7, asset8]});
+  res.render('market_margin', {table_header:[list, list2, list3], table2:[asset, asset2, asset3, asset4, asset5, asset6, asset7, asset8]});
 
 })
 app.get('/text.jade', function(req,res){
@@ -102,7 +121,7 @@ app.get('/product_8.jade', function(req,res){
 })
 app.get('/interlock_7.jade', function(req,res){
 
-  res.render('interlock_7', {table1:[il_list1, il_list2, il_list3],table2:[list_log1, list_log2, list_log3]});
+  res.render('interlock_7', {table_header:[il_list1, il_list2, il_list3],table2:[list_log1, list_log2, list_log3]});
 
 })
 app.listen(3000, function(){

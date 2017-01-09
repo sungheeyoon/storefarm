@@ -13,14 +13,17 @@ html(lang='en')
               |  마켓아이디 관리> 리스트
             // 마켓아이디 관리 리스트-> <!end
             div(align='right', ;='')
+              button.btn.btn-primary.btn-sm(id="addTR", type='submit') 테이블 추가
               button.btn.btn-primary.btn-sm(onclick="location.href='market_regist.jade'", type='submit') 마켓 아이디 등록하기
             .row.mt
               .col-lg-12
                 .content-panel
                   section#unseen
-                    include ./tabletest
+                    table.table.table-bordered.table-striped.table-condensed(id="table")
+                      include ./table_generator
                 // /content-panel
               // /col-lg-4
             // /row
           // 마켓아이디 관리>등록,변경
       // /MAIN CONTENT
+script(src='/assets/js/test.js')
