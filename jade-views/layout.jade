@@ -6,219 +6,134 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='Dashboard')
     meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
-    title  Hplusmall Template
+    title Hplusmall Template
     // Bootstrap core CSS
-    link(href='/assets/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/bootstrap.css', rel='stylesheet')
     // external css
-    link(href='/assets/font-awesome/css/font-awesome.css', rel='stylesheet')
+    link(href='assets/font-awesome/css/font-awesome.css', rel='stylesheet')
     // Custom styles for this template
-    link(href='/assets/css/style.css', rel='stylesheet')
-    link(href='/assets/css/style-responsive.css', rel='stylesheet')
-    link(href='/assets/css/table-responsive.css', rel='stylesheet')
+    link(href='assets/css/style.css', rel='stylesheet')
+    link(href='assets/css/style-responsive.css', rel='stylesheet')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body
     section#container
-      include ./layoutbody.jade
+      //
+        **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        ***********************************************************************************************************************************************************
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.logo(href='index.html')
+          b Hplusmall
+        // logo end
+        #top_menu.nav.notify-row
+          // notification start
+          ul.nav.top-menu
+
+        .top-menu
+          ul.nav.pull-right.top-menu
+            li
+              a.logout(href='/') Login
+      // header end
+      //
+        **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        ***********************************************************************************************************************************************************
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='as.jade')
+                img.img-circle(src='assets/img/ui-sam.jpg', width='60')
+            h5.centered Marcel Newman
+            li.mt
+              a(href='as.jade')
+                i.fa.fa-dashboard
+                span Dashboard
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-desktop
+                span 주문관리
+              ul.sub
+                li
+                  a(href='general.html') General
+                li
+                  a(href='buttons.html') Buttons
+                li
+                  a(href='panels.html') Panels
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-cogs
+                span 상품관리
+              ul.sub
+                li
+                  a(href='calendar.html') Calendar
+                li
+                  a(href='gallery.html') Gallery
+                li
+                  a(href='todo_list.html') Todo List
+            li.sub-menu
+              a.active(href='javascript:;')
+                i.fa.fa-book
+                span 게시판관리
+              ul.sub
+                li.active
+                  a(href='blank.html') Blank Page
+                li
+                  a(href='login.html') Login
+                li
+                  a(href='lock_screen.html') Lock Screen
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-tasks
+                span 연동 작업
+              ul.sub
+                li
+                  a(href='form_component.html') Form Components
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-th
+                span 사이트관리
+              ul.sub
+                li
+                  a(href='basic_table.html') Basic Table
+                li
+                  a(href='responsive_table.html') Responsive Table
+            li.sub-menu
+              a(href='javascript:;')
+                i.fa.fa-bar-chart-o
+                span Charts
+              ul.sub
+                li
+                  a(href='morris.html') Morris
+                li
+                  a(href='chartjs.html') Chartjs
+          // sidebar menu end
+      // sidebar end
+      //
         **********************************************************************************************************************************************************
         MAIN CONTENT
         ***********************************************************************************************************************************************************
       // main content start
       section#main-content
-        section.wrapper
-          h3
-            i.fa.fa-angle-right
-            |  마켓아이디 관리> 리스트
-          // 마켓아이디 관리 리스트-> <!end
-          div(align='right', ;='')
-            button.btn.btn-primary.btn-sm(href='index.html', type='submit')  마켓 아이디 등록하기
-          .row.mt
-            .col-lg-12
-              .content-panel
-                section#unseen
-                  table.table.table-bordered.table-striped.table-condensed
-                    thead
-                      tr
-                        th.numeric
-                          | 사이트
-                          br
-                          |  종류
-                        th.numeric  아이디
-                        th.numeric  최종 연동일
-                        th.numeric  등급
-                        th.numeric  현 상품수
-                        th.numeric  신규주문
-                        th.numeric  신규문의
-                        th.numeric  최근순환일
-                        th.numeric  최근증분일
-                        th.numeric  최근품단종일
-                        th.numeric  설정
-                    tbody
-                      tr
-                        td AAC
-                        td  COMPANY LIMITED.
-                        td.numeric $1.38
-                        td.numeric -0.01
-                        td.numeric -0.36%
-                        td.numeric $1.39
-                        td.numeric $1.39
-                        td.numeric $1.38
-                        td.numeric 9,395
-                        td.numeric 9,395
-                        td.numeric 9,395
-                      tr
-                        td AAD
-                        td GROUP
-                        td.numeric $1.15
-                        td.numeric   +0.02
-                        td.numeric 1.32%
-                        td.numeric $1.14
-                        td.numeric $1.15
-                        td.numeric $1.13
-                        td.numeric 56,431
-                        td.numeric 9,395
-                        td.numeric 9,395
-                      tr
-                        td AAX
-                        td LIMITED
-                        td.numeric $4.00
-                        td.numeric -0.04
-                        td.numeric -0.99%
-                        td.numeric $4.01
-                        td.numeric $4.05
-                        td.numeric $4.00
-                        td.numeric 90,641
-                        td.numeric 9,395
-                        td.numeric 9,395
-                      tr
-                        td ABC
-                        td ADELAIDE
-                        td.numeric $3.00
-                        td.numeric   +0.06
-                        td.numeric 2.04%
-                        td.numeric $2.98
-                        td.numeric $3.00
-                        td.numeric $2.96
-                        td.numeric 862,518
-                        td.numeric 9,395
-                        td.numeric 9,395
-                      tr
-                        td ABP
-                        td ABACUS
-                        td.numeric $1.91
-                        td.numeric 0.00
-                        td.numeric 0.00%
-                        td.numeric $1.92
-                        td.numeric $1.93
-                        td.numeric $1.90
-                        td.numeric 595,701
-                        td.numeric 9,395
-                        td.numeric 9,395
-              // /content-panel
-            // /col-lg-4
-          // /row
-        // 마켓아이디 관리>등록,변경
-      // /MAIN CONTENT
-      section#main-content
-        section.wrapper
-          h3
-            i.fa.fa-angle-right
-            |  마켓아이디 관리> 등록,변경
-          // 마켓아이디 관리 등록,변경> <!end
-          .row.mt
-            .col-lg-12
-              div(align='right', ;='')
-                button.btn.btn-primary.btn-sm(href='index.html', type='submit')  등록/변경하기
-              h4  사이트 정보
-              .content-panel
-                section#unseen
-                  table.table.table-bordered.table-striped.table-condensed
-                    thead
-                      tr
-                        th.numeric
-                          | 사이트
-                          br
-                          |  종류
-                        th.numeric  Select
-                        th.numeric
-                        th.numeric
-                    tbody
-                      tr
-                        td  아이디
-                        td  COMPANY LIMITED.
-                        td.numeric  비번
-                        td.numeric
-                      tr
-                        td  연동키1(파트너키)
-                        td GROUP
-                        td.numeric  연동키2(시크릿키)
-                        td.numeric
-                      tr
-                        td  상호
-                        td  확인버튼
-                        td.numeric  담당자명
-                        td.numeric
-                      tr
-                        td  As 담장자 연락처
-                        td ADELAIDE
-                        td.numeric
-                        td.numeric
-                      tr
-                        td  반품주소지
-                        td ABACUS
-                        td.numeric
-                        td.numeric  input
-              // /content-panel
-            // /col-lg-4
-          // /row
-      section#main-content
-        section.wrapper
-          h3
-            i.fa.fa-angle-right
-            |  마켓아이디 관리> 마진율 관리
-          // 마켓아이디 관리 등록,변경> <!end
-          .row.mt
-            .col-lg-12
-              div(align='right', ;='')
-                button.btn.btn-primary.btn-sm(href='index.html', type='submit')  신규 마진율 등록/변경
-              h4  사이트 정보
-              .content-panel
-                section#unseen
-                  table.table.table-bordered.table-striped.table-condensed
-                    thead
-                      tr
-                        th.numeric  셋트명
-                        th.numeric  메모
-                        th.numeric  등록일
-                        th.numeric  메모
-                        th.numeric  설정
-                    tbody
-                      tr
-                        td  스토어팜 기준가
-                        td  testaa
-                        td.numeric  16.12.12 19:11
-                        td.numeric  2(30만)
-                        th.numeric  삭제
-                      tr
-                        td  쿠팡 기준가
-                        td  testaa
-                        td.numeric  16.12.12 19:11
-                        td.numeric  2(30만)
-                        th.numeric  삭제
-              // /content-panel
-              br
-              div(align='center', ;='')
-                button.btn.btn-primary.btn-sm(href='index.html', type='submit')  확인
-            // /col-lg-4
-          // /row
-    // js placed at the end of the document so the pages load faster
-    script(src='/assets/js/jquery.js')
-    script(src='/assets/js/bootstrap.min.js')
-    script.include(type='text/javascript', src='/assets/js/jquery.dcjqaccordion.2.7.js')
-    script(src='/assets/js/jquery.scrollTo.min.js')
-    script(src='/assets/js/jquery.nicescroll.js', type='text/javascript')
+        section.wrapper.site-min-height
+          block content
+          
+    script(src='assets/js/jquery.js')
+    script(src='assets/js/bootstrap.min.js')
+    script(src='assets/js/jquery-ui-1.9.2.custom.min.js')
+    script(src='assets/js/jquery.ui.touch-punch.min.js')
+    script.include(type='text/javascript', src='assets/js/jquery.dcjqaccordion.2.7.js')
+    script(src='assets/js/jquery.scrollTo.min.js')
+    script(src='assets/js/jquery.nicescroll.js', type='text/javascript')
     // common script for all pages
-    script(src='/assets/js/common-scripts.js')
-    // script for this page
+    script(src='assets/js/common-scripts.js')
+    script(src='/assets/js/test.js')

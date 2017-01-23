@@ -1,0 +1,91 @@
+extends layout.jade
+block content
+    section.wrapper
+        h3
+            i.fa.fa-angle-right
+            |  마켓아이디>상품관리
+        // 마켓아이디  등록,변경> <!end
+        .row.mt
+            .col-lg-12
+                h4  원장구축
+                br
+                .form-panel
+                    form.form-horizontal.tasi-form(method='get')
+                        .form-group.has-success
+                            for item,i in interlock
+                                label.col-sm-1.control-label.col-lg-1(for='inputSuccess') !{interlock[i]}
+                                .col-lg-2
+                                    input#inputSuccess.form-control(type='text')
+
+                                    //연동셋 구분
+                        .form-group.has-warning
+                            for item,i in interlock2
+                                label.col-sm-1.control-label.col-lg-1(for='inputWarning') !{interlock2[i]}
+                                .col-lg-2
+                                    input#inputWarning.form-control(type='text')
+                        .form-group.has-warning
+                            for item,i in interlock3
+                                label.col-sm-1.control-label.col-lg-1(for='inputWarning') !{interlock3[i]}
+                                .col-lg-2
+                                    input#inputWarning.form-control(type='text')
+
+                                    //판매타입~배송비
+                        .form-group.has-error
+                            label.col-sm-1.control-label.col-lg-1(for='inputError') 검색
+
+                            .col-lg-2
+                                input#inputWarning.form-control(type='text')
+
+                            .col-lg-2
+                                input#inputWarning.form-control(type='text')
+
+                            label.col-sm-1.control-label.col-lg-1(for='inputWarning') 가격
+                            .col-lg-2
+                                input#inputWarning.form-control(type='text')
+                            .col-lg-2
+                                input#inputWarning.form-control(type='text')
+
+
+                                br
+                    div(align='center', ;='')
+                        button.btn.btn-primary.btn-sm(href='index.html', type='submit')  검색
+
+
+    h4
+        카테고리별 검색결과
+
+
+      .form-panel
+        section#unseen
+            table.table.table-bordered.table-striped.table-condensed
+                thead
+                    tr
+                        th
+                            input(type='checkbox', id="allCheck")
+                            for item in array2[0]
+                                th=item
+
+
+                tbody
+                    tr
+                        td
+                            input(type='checkbox')
+                            for item in array2[1]
+                                td= item
+                    tr
+                        td
+                            input(type='checkbox')
+                            for item in array2[2]
+                                td= item
+div(align='right', ;='')
+    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  오너클랜 판매 금지 상품 필터링
+    | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  연동작업 요청
+    | &nbsp&nbsp&nbsp&nbsp&nbsp
+div(align='center', ;='')
+    -for(var i=1; i<11; i++)
+        a.paginga(href='#') !{i}
+
+
+
+    //paginga sytle.css에 추가했음

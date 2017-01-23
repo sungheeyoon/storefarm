@@ -1,0 +1,14 @@
+thead
+  tr
+    for item in table2[0]
+      th=item
+tbody
+  for ll,i in table2
+    if i==0
+      -continue
+    tr
+      for ml in ll
+        td= ml
+      td
+        button.set 수정
+        button.del 삭제

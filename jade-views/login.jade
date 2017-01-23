@@ -9,7 +9,7 @@ html(lang='en')
       ***********************************************************************************************************************************************************
     #login-page
       .container
-        form.form-login(action='index.jade')
+        form.form-login(action='2join.jade')
           h2.form-login-heading sign in now
           .login-wrap
             input.form-control(type='text', placeholder='아이디 입력', autofocus='')
@@ -17,7 +17,7 @@ html(lang='en')
             input.form-control(type='password', placeholder='비밀번호 입력')
             br
             br
-            button.btn.btn-theme.btn-block(type='button', onclick="location.href='index.html'")
+            button.btn.btn-theme.btn-block(type='button', onclick="location.href='2join.jade'")
               i.fa.fa-lock
               |  로그인
             hr
@@ -25,12 +25,12 @@ html(lang='en')
               br
               |                 아이디가 없으십니까?
               br
-              a(href='form_component.jade')
+              a(href='2join.jade')
                 | 회원가입
             .registration
               | ID 또는 Password를 잊으셨습니까?
               br
-              a(href='forgot_select.jade')
+              a(href='4forgotid.jade')
                 | ID/Password
           // Modal
           #myModal.modal.fade(aria-hidden='true', aria-labelledby='myModalLabel', role='dialog', tabindex='-1')

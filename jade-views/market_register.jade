@@ -1,0 +1,65 @@
+extends layout.jade
+block content
+      aside
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  마켓아이디 관리> 등록,변경
+            // 마켓아이디 관리 등록,변경> <!end
+            .row.mt
+              .col-lg-12
+                form(action="/market_list.jade" method='get')
+                  div(align='right', ;='')
+                    button.btn.btn-primary.btn-sm(type='submit')  등록/변경하기
+                  h4  사이트 정보
+                  .content-panel
+                    section#unseen
+                      table.table.table-bordered.table-striped.table-condensed
+                        thead
+                          tr
+                            td 사이트 종류
+                            td
+                              select(name="site")
+                                option(selected disabled) 사이트 선택
+                                option(value="스토어팜") 스토어팜
+                                option(value="쿠팡") 쿠팡
+                                option(value="옥션") 옥션
+                                option(value="지마켓") 지마켓
+                                option(value="고도") 고도
+                            td
+                            td
+                         tbody
+                           tr
+                             td 아이디
+                             td
+                               input(type="text" name="id")
+                             td 패스워드
+                             td
+                               input(type="password" name="passwd")
+                           tr
+                             td 연동키1(파트너키)
+                             td
+                               input(type="text", name="intlck_key1")
+                             td 연동키2(시크릿키)
+                             td
+                               input(type="text" name="intlck_key2")
+                           tr
+                             td 상호
+                             td
+                               input(type="text" name="sangho")
+                             td 담장자명
+                             td
+                               input(type="text" name="damdang")
+                           tr
+                             td AS담당자 연락처
+                             td
+                               input(type="text" name="asnumber")
+                           tr
+                             td 반품 주소지
+                             td
+                               input(type="text" name="retaddr")
+                             
+                      
+                  // /content-panel
+                // /col-lg-4
+              // /row

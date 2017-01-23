@@ -1,0 +1,46 @@
+extends layout.jade
+block content
+      aside
+        section.wrapper
+          h3
+            i.fa.fa-angle-right
+            |  정보변경
+          // BASIC FORM ELELEMNTS
+          .row.mt
+            .col-lg-12
+              .form-panel
+                h4.mb
+                  i.fa.fa-angle-right
+                  |  정보변경
+                form.form-horizontal.style-form(method='get')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label ID
+                    .col-sm-10
+                      input.form-id(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label Password
+                    .col-sm-10
+                      input.form-password(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label Owerclan ID
+                    .col-sm-10
+                      input.form-owerclanid(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label 상호
+                    .col-sm-10
+                      input#focusedInput.form-control(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label 사업자 번호
+                    .col-sm-10
+                      input#disabledInput.form-control(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label 주문 담당자
+                    .col-sm-10
+                      input.form-control(type='text')
+                  .form-group
+                    label.col-sm-2.col-sm-2.control-label 주문 연락처
+                    .col-sm-10
+                      input.form-control(type='password', placeholder='')
+                  .form-group
+                    label.col-lg-2.col-sm-2.control-label
+                      button.btn.btn-theme(type='submit') Sign in

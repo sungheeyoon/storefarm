@@ -1,0 +1,55 @@
+extends layout.jade
+block content
+      aside
+          section.wrapper
+            h3
+              i.fa.fa-angle-right
+              |  연동 상태> 등록
+            // 마켓아이디  등록,변경> <!end
+            .row.mt
+              .col-lg-12
+                h4  작업 설정
+                div(align='right', ;='')
+                  button.btn.btn-primary.btn-sm(href='index.html', type='submit')  신규 연동 작업 등록
+                .content-panel
+                  section#unseen
+                    table.table.table-bordered.table-striped.table-condensed
+                      thead
+                        tr
+                          th.numeric 사이트 선택
+                          th
+                                     .col-sm-14
+                                          select(name='job')
+                                                      option(selected disabled) select
+                                                      option(value='스토어팜') 스토어팜
+                                                      option(value='쿠팡') 쿠팡
+                                                      option(value='옥션') 옥션
+                                                      option(value='지마켓') 지마켓
+                                                      option(value='고도') 고도
+                          th
+                          th
+
+
+                      tbody
+                        tr
+                          td 기동 작업 선택
+                          td
+                            p
+                               select(name='job')
+                                           option(selected disabled) select
+                                           option(value='상품등록') 상품등록
+                                           option(value='순환') 순환
+                                           option(value='증분') 증분
+                                           option(value='품단종') 품단종
+                                           option(value='신상품') 신상품
+                                           option(value='변동상품') 변동상품
+                                           option(value='전상품삭제') 전상품삭제
+                            td
+                            td
+                        tr 
+                            td 기동시간/간격   
+                            td
+                            td
+                            td
+                         tr
+                          td 메모
