@@ -1,0 +1,99 @@
+doctype html
+html(lang='en')
+    head
+        include ./layouthead.jade
+    body
+        include ./layoutbody.jade
+        section#container
+            section#main-content
+                section.wrapper
+                    h3
+                        i.fa.fa-angle-right
+                        |  마켓아이디>상품관리
+                    // 마켓아이디  등록,변경> <!end
+                    .row.mt
+                        .col-lg-12
+                            h4  원장구축
+                            br
+                            .form-panel
+                                form.form-horizontal.tasi-form(method='get')
+                                    .form-group.has-success
+                                        for item,i in textarray
+                                            label.col-sm-1.control-label.col-lg-1(for='inputSuccess') !{textarray[i]}
+                                            .col-lg-2
+                                                input#inputSuccess.form-control(type='text')
+
+                                                //판매타입~배송비
+
+                                    .form-group.has-warning
+                                        for item,i in textarray
+                                            label.col-sm-1.control-label.col-lg-1(for='inputWarning') !{textarray2[i]}
+                                            .col-lg-2
+                                                input#inputWarning.form-control(type='text')
+
+                                                //원산지~필터링
+
+                                    .form-group.has-error
+                                        label.col-sm-1.control-label.col-lg-1(for='inputError') 검색
+                                        .col-lg-2
+                                            select(name='job')
+                                                for item in textarray3
+                                                    option(value= item) !{item}
+
+                                                    //(select부분)
+
+                                        .col-lg-2
+                                            input#inputWarning.form-control(type='text')
+
+                                        label.col-sm-1.control-label.col-lg-1(for='inputWarning') 가격
+                                        .col-lg-2
+                                            input#inputWarning.form-control(type='text')
+                                        .col-lg-2
+                                            input#inputWarning.form-control(type='text')
+
+                                            //검색~가격
+
+                                            br
+                                div(align='center', ;='')
+                                    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  검색
+
+section#main-content
+    section.wrapper
+
+        h4
+            카테고리별 검색결과
+
+        .content-panel
+            section#unseen
+                table.table.table-bordered.table-striped.table-condensed
+                    thead
+                        tr
+                            th  
+                                input(type='checkbox', id="allCheck")
+                                for item in array2[0]
+                                    th=item
+
+
+                    tbody
+                        tr 
+                            td
+                                input(type='checkbox')
+                                for item in array2[1]
+                                    td= item
+                        tr
+                            td
+                                input(type='checkbox')
+                                for item in array2[2]
+                                    td= item
+div(align='right', ;='')
+    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  선택상품 원장등록
+    | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    button.btn.btn-primary.btn-sm(href='index.html', type='submit')  엑셀양식 등록
+    | &nbsp&nbsp&nbsp&nbsp&nbsp
+div(align='center', ;='')
+    -for(var i=1; i<11; i++)
+        a.paginga(href='#') !{i}
+
+script(src='/assets/js/test.js')
+
+    //paginga sytle.css에 추가했음
